@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Live Demo - Ethical AI Blocking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🛡️ Sovereign Alignment Protocol</h1>
+            <p>Live Demonstration of Ethical AI Content Blocking</p>
+        </header>
+
+        <!-- Health Status -->
+        <section class="health-status">
+            <div id="healthCard" class="status-card">
+                <h3>System Health</h3>
+                <div id="healthIndicator" class="health-indicator"></div>
+                <p id="healthText"></p>
+            </div>
+        </section>
+
+        <!-- Control Panel -->
+        <section class="control-panel">
+            <button onclick="runAllTests()" class="btn btn-primary">🚀 Run All 8 Test Cases</button>
+            <button onclick="resetDemo()" class="btn btn-secondary">🔄 Reset Demo</button>
+        </section>
+
+        <!-- Test Cases -->
+        <section class="test-cases">
+            <h2>Test Cases (Click to Validate)</h2>
+            <div id="casesGrid" class="cases-grid"></div>
+        </section>
+
+        <!-- Results Panel -->
+        <section class="results-panel">
+            <h2>Validation Results</h2>
+            <div id="resultsContainer" class="results-container"></div>
+        </section>
+
+        <!-- Analytics Dashboard -->
+        <section class="analytics">
+            <h2>Real-time Analytics</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Validations</h4>
+                    <p id="totalValidations" class="metric-value">0</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Approval Rate</h4>
+                    <p id="approvalRate" class="metric-value">0%</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Blocked Count</h4>
+                    <p id="blockedCount" class="metric-value">0</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Violations Detected</h4>
+                    <p id="totalViolations" class="metric-value">0</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="violationChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Rule Explanations -->
+        <section class="rules-section">
+            <h2>SAP's 5 Ethical Rules</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <h4>Rule 1: Universal Reciprocity</h4>
+                    <p>Actions must benefit the recipient. Would you accept this if roles were reversed?</p>
+                </div>
+                <div class="rule-card">
+                    <h4>Rule 2: Zero-Retaliation</h4>
+                    <p>Block revenge, payback, and retaliatory logic. Default to de-escalation.</p>
+                </div>
+                <div class="rule-card">
+                    <h4>Rule 3: Servant-Leadership</h4>
+                    <p>Power must serve others, never exploit. Superior ability uplifts subordinates.</p>
+                </div>
+                <div class="rule-card">
+                    <h4>Rule 4: Radical Integrity</h4>
+                    <p>Direct, honest communication. No obfuscation, lies, or deception.</p>
+                </div>
+                <div class="rule-card">
+                    <h4>Rule 5: Harm Prevention</h4>
+                    <p>Block content that could cause physical or psychological harm.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='demo.js') }}"></script>
+</body>
+</html>
